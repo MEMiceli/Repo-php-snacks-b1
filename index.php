@@ -7,21 +7,21 @@ Olimpia Milano - Cantù | 55-60 -->
 $primaGiornata = [
         [
         'squadraOspite' => 'Cesena',
-            ["punteggio" => "24"],
+        'punteggioOspite' => 24,
         'squadraCasa' => 'Cosenza',
-            ["punteggio" => "42"],
+        'punteggioCasa' => 42,
         ],
         [
         'squadraOspite' => 'Como',
-            ["punteggio" => "34"],
+        'punteggioOspite' => 34,
         'squadraCasa' => 'Livorno',
-            ["punteggio" => "32"],
+        'punteggioCasa' => 32,
         ],
         [
-         'squadraOspite' => 'Perugia',
-            ["punteggio" => "54"],
+        'squadraOspite' => 'Perugia',
+        'punteggioOspite' => 54,
         'squadraCasa' => 'Padova',
-            ["punteggio" => "35"],
+        'punteggioCasa' => 35,
         ],
 ];
 var_dump($primaGiornata);
@@ -45,14 +45,9 @@ var_dump($primaGiornata);
     </pre>
         <ul>
             <?php for($i = 0; $i < count($primaGiornata); $i++) { ?>
-                <li><?php print_r( $primaGiornata['squadraOspite'][$i] . $primaGiornata['squadraCasa'][$i] . $primaGiornata['squadraCasa']['punteggio'][$i] . $primaGiornata['squadraOspite']['punteggio'][$i]); ?></li>
+                <li><?php echo $primaGiornata[$i]['squadraOspite'] . " - " . $primaGiornata[$i]['squadraCasa'] . " | " . $primaGiornata[$i]['punteggioCasa'] . "-" . $primaGiornata[$i]['punteggioOspite']; ?></li>
             <?php } ?>
         </ul>
-    <ul>
-         
-            <?php echo $primaGiornata[$i]['squadraOspite']; ?>
-        
-    </ul>
     
 </body>
 </html>

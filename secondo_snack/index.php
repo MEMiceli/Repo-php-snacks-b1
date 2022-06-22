@@ -1,9 +1,9 @@
 <!-- Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
 <?php
-$_GET['name'];
-$_GET['email'];
-$_GET['age']
+$name = $_GET['name'];
+$email = $_GET['email'];
+$age = $_GET['age']
 ?>
 
 <!DOCTYPE html>
@@ -15,17 +15,21 @@ $_GET['age']
     <title>Document</title>
 </head>
 <body>
-    <?php if(strlen('name') > 3){
-            if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-                if(filter_var($age,FILTER_VALIDATE_INT)){
-                    echo "$email Valida";     
-                }
+    <?php if(strlen($name) > 3 && !is_numeric($name) && filter_var($email, FILTER_VALIDATE_EMAIL) && is_numeric($age)){
+                echo "Accesso Riuscito"; 
             }
-        
-        else{
-            echo "$email Non valida";
-        }
-        }
+            else{
+                echo "Accesso Negato";
+            }
+        //     if(filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        //         if(filter_var($age,is_numeric)){
+        //             echo "Accesso Riuscito";     
+        //         }
+        //     }
+        //     else{
+        //     echo "$email Non valida";
+        // }
+        // }
     ?>
     
 </body>
