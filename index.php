@@ -1,0 +1,44 @@
+<!-- Snack 1
+Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.
+Olimpia Milano - Cantù | 55-60 -->
+
+<?php
+
+$primaGiornata = [
+        [
+        'squadraOspite' => 'Cesena',
+            ["punteggio" => "24"],
+        'squadraCasa' => 'Cosenza',
+            ["punteggio" => "42"],
+        ],
+        [
+        'squadraOspite' => 'Como',
+            ["punteggio" => "34"],
+        'squadraCasa' => 'Livorno',
+            ["punteggio" => "32"],
+        ],
+        [
+         'squadraOspite' => 'Perugia',
+            ["punteggio" => "34"],
+        'squadraCasa' => 'Padova',
+            ["punteggio" => "32"],
+        ],
+    
+    
+
+];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
