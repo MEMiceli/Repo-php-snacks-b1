@@ -19,14 +19,14 @@ $primaGiornata = [
         ],
         [
          'squadraOspite' => 'Perugia',
-            ["punteggio" => "34"],
+            ["punteggio" => "54"],
         'squadraCasa' => 'Padova',
-            ["punteggio" => "32"],
+            ["punteggio" => "35"],
         ],
-    
-    
-
 ];
+var_dump($primaGiornata);
+
+
 
 ?>
 
@@ -39,6 +39,20 @@ $primaGiornata = [
     <title>Document</title>
 </head>
 <body>
+    <h2>Prima Giornata</h2>
+    <pre>
+        <?php print_r ($primaGiornata); ?>
+    </pre>
+        <ul>
+            <?php for($i = 0; $i < count($primaGiornata); $i++) { ?>
+                <li><?php print_r( $primaGiornata['squadraOspite'][$i] . $primaGiornata['squadraCasa'][$i] . $primaGiornata['squadraCasa']['punteggio'][$i] . $primaGiornata['squadraOspite']['punteggio'][$i]); ?></li>
+            <?php } ?>
+        </ul>
+    <ul>
+         
+            <?php echo $primaGiornata[$i]['squadraOspite']; ?>
+        
+    </ul>
     
 </body>
 </html>
